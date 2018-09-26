@@ -1,0 +1,36 @@
+.login{
+    text-align: center;
+    padding-top: 50px;
+}
+.login input, .login button{
+    display: block;
+    width: 25%;
+    margin: 10px auto;
+}
+.login input{
+    border: none;
+    background: rgba(200,200,200,0.3);
+    border-bottom: 1px solid #BBB;
+    margin: 10px auto;
+    padding-top: 10px;
+}
+.login input:focus{
+    border-bottom: 1px solid #000;
+    outline: 1px solid transparent;
+}
+.login button{
+    border: 1px solid #363636;
+    padding: 0.5em;
+    margin-top: 30px;
+    color: #000;
+    background: transparent;
+    transition: 0.5s;
+}
+.login button:hover{
+    background: #363636;
+    color: #fff;
+    cursor: pointer;
+}
+.login button:focus{
+    outline: none;
+}

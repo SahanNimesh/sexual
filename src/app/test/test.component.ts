@@ -4,25 +4,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-test',
 	template: `
-		<h2>
-			{{ "Hello " + sexData.lastName }}
-		</h2>
-		<button (click)="sendEventMsg()">Send Event Message</button>
-  `
-	styles: [`
-		h2{
-			font-family: arial;
-		}
-	`]
+		<h2>{{ name | uppercase }}</h2>
+		<h2>{{ message | titlecase }}</h2>
+		<h2>{{ name | slice:3:5 }}</h2>
+		<h2>{{ person | json }}</h2>
+  `,
+	styles: []
 })
 export class TestComponent implements OnInit {
-	// @Input('prentData') public name;
-	@Input() public sexData;
-
-	@Output() public childEvent = new EventEmitter();
-	sendEventMsg(){
-		this.childEvent.emit('Hello Fucking World');
-	}
+	public name = "Codevolution";
+	public message = "Welcom To Codevolution";
+	public person = {
+		"firstName": "Sahan",
+		"lastName": "Weerakoon"
+	};
 	constructor() { }
 
   ngOnInit() {

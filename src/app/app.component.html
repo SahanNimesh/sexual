@@ -1,8 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div style="text-align:center" class="parent-div">
   <h1>
-    {{ fuckingMessage }}
+    Welcome To Bla Bla
   </h1>
-  <!-- <app-test></app-test> -->
+  <nav>
+    <a href="/login">Login</a>
+    <a href="/signin">Signin</a>
+    <a href="/home">Home</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
-<app-test (childEvent)="fuckingMessage=$event" [sexData]="name"></app-test>
